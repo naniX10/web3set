@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang = "ko">
+
+    <head>
+        <meta charset="UTF-8"> <!-- 이거랑 저위에 ko를 써줘야 한글이 나옴 -->
+        <title>테이블태그</title>
+    </head>
+
+    <body>
+        <h1>테이블태그</h1>
+        <h2>학생 테이블</h2>
+        <table border = "1" cellspacing = 0 cellpadding = "10">
+            <caption>표 1-1 학생테이블</caption>
+            <thead>
+            <tr>
+                <th>학번</th>
+                <th>이름</th>
+                <th>주소</th>
+                <th>생년월일</th>
+                <th>학과명</th>
+                <th>교수</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>201350050</td>
+                <td>김태희</td>
+                <td>경기도 고양시</td>
+                <td>1985.03.22</td>
+                <td>컴퓨터</td>
+                <td>504</td>
+            </tr>
+            <tr>
+                <td>201350050</td>
+                <td>김태희</td>
+                <td>경기도 고양시</td>
+                <td>1985.03.22</td>
+                <td>컴퓨터</td>
+                <td>504</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2>학과</h2>
+        <table border= "1" cellspacing = "0" cellpadding = "5">
+            <thead>
+            <tr>
+                <th><ins>학과명</ins></th>
+                <th>전화번호</th>
+                <th>사무실위치</th>
+                <th>학과장</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <th>컴퓨터공학</th>
+                <th>123-4567-8901</th>
+                <th>E동 2층</th>
+                <th>504</th>
+            </tr>
+            <tr>
+                <th>의상디자인</th>
+                <th>234-5678-9012</th>
+                <th>A동 1층</th>
+                <th>301</th>
+            </tr>
+            <tr>
+                <th>식품영양</th>
+                <th>345-6789-0123</th>
+                <th>F동 8층</th>
+                <th>556</th>
+            </tr>
+            <tr>
+                <th>철학</th>
+                <th>456-7890-1234</th>
+                <th>Z동 25층</th>
+                <th>504</th>
+            </tr>
+            </tbody>
+            <caption>표 1-2 학과 테이블</caption>
+
+        </table>
+
+        <hr>
+        <h2>복잡한 표 다루기</h2>
+        <table border = "1" cellpadding = "10" width = "350">
+             <tr>
+                <td colspan = "2">1</td>
+                <!--<td>2</td> -->
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td colspan="3">3</td>
+                <!--<td>4</td>
+                <td>5</td>-->
+            </tr>
+
+        </table>
+
+
+        <table border = "1" width = "350">
+            <tr height="35">
+               <td rowspan="2" width = "70">1</td>
+               <td width="70">2</td>
+               <td width = "70">3</td>
+               <td colspan="2" rowspan="2" width = "140">4</td>
+            </tr>
+            <tr>
+
+               <td>2</td>
+               <td>3</td>
+
+            </tr>
+         </table>
+
+        <br>
+        <hr color = #4BECFF>
+        <br>
+
+        <table  border = "1" cellspacing = "0" width = "500" cellpadding = "10">
+
+               <tr><td colspan = "5">1</td></tr>
+               <tr><td colspan = "5">2</td></tr>
+               <tr><td rowspan = "3">3</td>
+                   <td rowspan = "3">4</td>
+                   <td>5</td>
+                   <td>6</td>
+                   <td>7</td>
+                </tr>
+                <tr><td colspan="2">8</td>
+                    <td>9</td></tr>
+                <tr><td colspan = "3">10</td></tr>
+
+        </table>
+
+        <style type="text/css">
+            p {
+                color: #4BECFF;
+            }
+        </style>
+        <p>고양이보다는 멍멍이지</p>
+
+        <style>
+    p {
+      color: midnightblue;
+      background-color: paleturquoise;
+      padding: 5px;
+      border: 1px solid black;
+        }
+        </style>
+
+
+
+    </body>
+
+</html>
+<!-- 테이블
+여러 종류의 데이터를 보기좋게 정리해서 2차원 형태의 표로 나타낸 것
+table 태그를 이용해서 표를 표현함
+표안의 행과 열은 th, tr, td 등을 이용해서 표현함
+
+tr : table row, 테이블의 행을 표현할때 사용
+th : table header, 테이블의 제목 셀을 표현할때 사용
+     >>> 자동으로 가운데 정렬과 진하게 속성이 지정
+td : table data, 테이블의 일반 셀을 표현할때 사용
+
+border : 테이블 테두리표시, 숫자는 굵기
+cellspacing : 각 셀들간의 간격 조정 ,0 으로 하면 좋아보임
+callpadding : 셀 테두리와 셀내 텍스트간의 간격 조정
+
+테이블에 의미 부여하기
+thead : 테이블 제목행 영역을 정의
+tbody : 테이블 본문행 영역을 정의
+tfoot : 테이블 하단제목행 영역을 정의
+caption : 테이블의 제목을 표현하고 싶을때 사용
+
+테이블 셀 합치기
+colspan : 열끼리 합칠때 사용 (가로로 합침)
+rowspan : 행끼리 합칠때 사용 (세로로 합침)
+
+
+-->
