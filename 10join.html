@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang = "ko">
+
+    <head>
+        <meta charset="UTF-8"> <!-- 이거랑 저위에 ko를 써줘야 한글이 나옴 -->
+        <title>회원가입</title>
+    </head>
+
+    <body>
+        <h1>회원가입</h1>
+        <form name = "joinfrm" method = "post">
+
+        <p><span style = "color: red">*</span> 표시 항목은 필수 입력 항목입니다</p>
+        <!--<p1 style="color: red">*</p1><p1>표시 항목은 필수 입력 항목입니다.</p1>-->
+
+
+        <table cellpadding = "7" cellspacing = "0">
+
+            <!-- 아이디 -->
+            <tr><td style = "background: #DCDCDC; width : 150px; text-align : right">아 이 디</td>
+                <td><span style = "color: red">*</span> <input type = "text" size = "12" name = "userid">
+                    <button type = "button">ID 중복검사</button><br>
+                    <span>&nbsp;&nbsp;아이디는 영문, 숫자 조합으로 하셔야 합니다 [4자리 이상 12자리 이하]<br>
+                    &nbsp;&nbsp;아이디는 <span style = "color: red">소문자</span>로 저장됩니다.</span>
+                </td>
+            </tr>
+
+            <!--<div>
+                <text style ="background: #B5B7BA"> 아 이 디</text> &nbsp;&nbsp;&nbsp;&nbsp;
+                <text style="color: red">*</text>
+                <input type = "text" size = "12" name = "uid">
+                <button type = "submit">ID 중복검사</button>
+            </div>
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <p0>아이디는 영문, 숫자 조합으로 하셔야합니다. [4자리 이상 12자리 이하]<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                아이디는 </p0>
+            <p0 style = "color: red">소문자</p0>
+            <p0>로 저장 됩니다</p0> -->
+
+
+            <!-- 비밀번호 -->
+
+            <tr><td style = "background: #DCDCDC; width : 150px; text-align : right">암 &nbsp;&nbsp;&nbsp; 호</td>
+                <td><span style = "color: red">*</span> <input type = "password" size = "12" name = "passwd">
+                    <br>
+                    <span>&nbsp;&nbsp;비밀번호는 4자리이상 12자리 이하로 입력해주세요.<br></span>
+                </td>
+            </tr>
+
+
+            <!--<div>
+                <text style = "background: #B5B7BA">암&nbsp; &nbsp;호</text> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <text style = "color: red">*</text>
+                <input type = "password" size = "12" name = "pwd">
+
+            </div>
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <p0>비밀번호는 4자리이상 12자리 이하로 입력해주세요</p0> -->
+
+
+            <!-- 비번 확인 -->
+
+
+            <tr><td style = "background: #DCDCDC; width : 150px; text-align : right"> 암호확인 </td>
+                <td><span style = "color: red">*</span> <input type = "password" size = "12" name = "chkpwd">
+                    <br>
+                </td>
+            </tr>
+
+            <!--
+            <div>
+                <text style = "background: #B5B7BA">암호확인</text> &nbsp;&nbsp;&nbsp;
+                <text style = "color: red">*</text>
+                <input type = "password" size = "12" name = "repwd">
+            </div>
+            -->
+
+
+            <!-- 이름 -->
+
+
+            <tr><td style = "background: #DCDCDC; width : 150px; text-align : right">이 &nbsp;&nbsp;&nbsp; 름</td>
+                <td><span style = "color: red">*</span> <input type = "text" size = "12" name = "name">
+                    <br>
+                </td>
+            </tr>
+
+            <!--
+            <div>
+                <text style = "background: #B5B7BA">이&nbsp; &nbsp;름</text> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <text style = "color: red">*</text>
+                <input type = "text" size = "12" name = "name">
+            </div>
+            -->
+            <br>
+            <!-- 대화명 -->
+            <br>
+
+            <tr><td style = "background: #DCDCDC; width : 150px; text-align : right">대 화 명</td>
+                <td>&nbsp;&nbsp;<input type = "text" size = "12" name = "nickname">
+                    <button type = "submit">중복검사</button>
+                    <br><span>&nbsp;&nbsp;대화명을 지정하지 않으면 회원님의 이름으로 대화명이 지정됩니다<br>
+                    &nbsp;&nbsp;대화명은 한글, 영문 관계없이 10글자 이내로 하셔야 합니다</span>
+                </td>
+            </tr>
+
+            <!--
+            <div>
+                <text style = "background: #B5B7BA">대 화 명</text> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type = "text" size = "12" name = "nickname">
+                <button type = "submit">중복검사</button>
+            </div>
+            -->
+
+            <!-- 주민번호 -->
+
+            <tr><td style = "background: #DCDCDC; width : 150px; text-align : right">주민등록번호</td>
+                <td><span style = "color: red">*</span> <input type = "text" size = "6" name = "jumin1"> -
+                    <input type = "text" size = "7" name = "jumin2">
+                    <br>
+                </td>
+            </tr>
+
+            <!-- 생년월일 -->
+
+            <tr><td style = "background: #DCDCDC; width : 150px; text-align : right">생년월일</td>
+                <td><span style = "color: red">*</span> <input type = "text" size = "2" name = "year"> 년
+                    <input type = "text" size = "1" name = "month"> 월
+                    <input type = "text" size = "1" name = "day"> 일
+                    <br>
+                </td>
+            </tr>
+
+            <!-- 성별 -->
+
+            <tr><td style = "background: #DCDCDC; width : 150px; text-align : right">성 &nbsp;&nbsp;&nbsp; 별</td>
+                <td><span style = "color: red">*</span> <input type = "radio" name = "gender" value = "m"> 남자
+                    &nbsp;&nbsp;
+                    <input type = "radio" name = "gender" value = "f"> 여자
+                    <br>
+                </td>
+            </tr>
+
+            <!-- email -->
+
+            <tr><td style = "background: #DCDCDC; width : 150px; text-align : right">E - mail</td>
+                <td><span style = "color: red">*</span> <input type = "text" size = "30" name = "email">
+                    <br>
+                </td>
+            </tr>
+
+            <!-- 이메일 수신 -->
+
+            <tr><td style = "background: #DCDCDC; width : 150px; text-align : right">메일수신</td>
+                <td><span style = "color: red">*</span>
+                    <input type = "radio" name = "agree" value = "y" checked> 수신동의
+                    &nbsp;&nbsp;
+                    <input type = "radio" name = "agree" value = "n"> 수신거부
+                    <br>
+                </td>
+            </tr>
+
+            <!-- 우편 번호 -->
+
+            <tr><td style = "background: #DCDCDC; width : 150px; text-align : right">우편번호</td>
+                <td><span style = "color: red">*</span> <input type = "text" size = "1" name = "zip1"> -
+                    <input type = "text" size = "1" name = "zip2">
+                    <button type = "button">검색</button>
+                    <br>
+                </td>
+            </tr>
+
+            <!-- 주소 -->
+
+            <tr><td style = "background: #DCDCDC; width : 150px; text-align : right">주 &nbsp;&nbsp;&nbsp; 소</td>
+                <td><span style = "color: red">*</span> <input type = "text" size = "30" name = "addr1"><br>
+                    &nbsp;&nbsp;<input type = "text" size = "20" name = "addr2">
+                    <br>
+                </td>
+            </tr>
+
+            <!-- 전번 -->
+
+            <tr><td style = "background: #DCDCDC; width : 150px; text-align : right">전화번호</td>
+                <td><span style = "color: red">*</span> <select name = "tel1">
+                         <option>02</option><option>031</option><option>032</option><option>033</option>
+                    </select> -
+                    <input type = "text" size = "3" name = "tel2"> -
+                    <input type = "text" size = "3" name = "tel3">
+                    <br>
+                </td>
+            </tr>
+
+            <!--휴대폰 -->
+
+            <tr><td style = "background: #DCDCDC; width : 150px; text-align : right">핸 드 폰</td>
+                <td><span style = "color: red">*</span> <select name = "hp1">
+                         <option>010</option><option>011</option><option>017</option><option>019</option>
+                    </select> -
+                    <input type = "text" size = "3" name = "hp2"> -
+                    <input type = "text" size = "3" name = "hp3">
+                    <br>
+                </td>
+            </tr>
+
+            <!-- 직업 -->
+
+            <tr><td style = "background: #DCDCDC; width : 150px; text-align : right">직 &nbsp;&nbsp; 업</td>
+                <td>&nbsp;&nbsp;<select name = "job">
+                         <option>선택하세요</option><option>학생</option><option>회사원</option>
+                         <option>무직</option>
+                    </select>
+                    <br>
+                </td>
+            </tr>
+
+            <!-- 취미 -->
+
+            <tr><td style = "background: #DCDCDC; width : 150px; text-align : right">취 &nbsp;&nbsp;&nbsp; 미</td>
+                <td><span style = "color: red">*</span>
+                    <input type = "checkbox" name = "hobby" value = "sports"> 운동
+                    &nbsp;
+                    <input type = "checkbox" name = "hobby" value = "books"> 독서
+                    &nbsp;
+                    <input type = "checkbox" name = "hobby" value = "shopping"> 쇼핑
+                    &nbsp;
+                    <input type = "checkbox" name = "hobby" value = "trip"> 여행
+                    &nbsp;
+                    <input type = "checkbox" name = "hobby" value = "movie"> 영화감상
+                    &nbsp;
+                    <input type = "checkbox" name = "hobby" value = "musics"> 음악감상
+                    <br>
+                </td>
+            </tr>
+
+            <!-- 자기소개 -->
+
+            <tr><td style = "background: #DCDCDC; width : 150px; text-align : right">자기소개</td>
+                <td>&nbsp;&nbsp;<textarea name = "intro" cols = "75" rows = "5">
+                    </textarea>
+                    <br>
+                </td>
+            </tr>
+
+            <!-- 버튼 -->
+
+            <tr><td colspan = "2" style = "text-align: center">
+                <button type = "submit">등록</button> &nbsp;&nbsp;
+                <button type = "resrt">취소</button>
+                </td>
+            </tr>
+
+
+        </table>
+        </form>
+    </body>
+
+</html>
