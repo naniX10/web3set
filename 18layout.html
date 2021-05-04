@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang = "ko">
+
+    <head>
+        <meta charset="UTF-8"> <!-- 이거랑 저위에 ko를 써줘야 한글이 나옴 -->
+        <title>layout</title>
+        <style>
+            hr { margin: 30px 0 }
+            .box { width: 200px; height: 70px }
+            .bg1 {background: red}
+            .bg2 {background: white }
+            .bg3 {background: blue }
+
+            .ab1, .ab2, .ab3 { position: absolute}
+            .ab1 { top: 50px; left: 50px; }
+            .ab2 { top: 75px; left: 75px; }
+            .ab3 { top: 100px; left: 100px; }
+            .bg4 {background: black}
+            .bg5 {background: yellow }
+            .bg6 {background: red }
+
+            .rt1, .rt2, .rt3 { position: relative }
+            .rt1 { top: 50px; left: 50px; }
+            .rt2 { top: 75px; left: 75px; }
+            .rt3 { top: 100px; left: 100px; }
+            .bg7 { background: green }
+            .bg8 { background: #F8F8FF }
+            .bg9 { background: red }
+
+            .fx1, .fx2, .fx3 { position: fixed}
+            .fx1 { top: 50px; right: 50px; }
+            .fx2 { top: 75px; right: 75px; }
+            .fx3 { top: 100px; right: 100px; }
+            .bg10 { background: #C48FFF }
+            .bg11 { background: #FF702C }
+            .bg12 { background: #ADE0FF }
+
+
+        </style>
+    </head>
+
+    <body>
+        <h1>layout</h1>
+        <h2>위치지정 : 정적배치 static </h2>
+        <div class="box bg1"></div>
+        <div class="box bg2"></div>
+        <div class="box bg3"></div>
+
+        <hr>
+
+        <h2>위치지정 : 절대배치 absolute </h2>
+        <div class="box bg4 ab1">
+             <div class="box bg5 ab2">
+                  <div class="box bg6 ab3"></div> <!-- ab3 ab2를 기준으로 움직임 -->
+            </div> <!-- ab2 ab1을 기준으로 움직임-->
+        </div> <!-- ab1 body를 기준으로 움직임 -->
+
+        <hr>
+
+        <h2>위치지정 : 상대배치 relative </h2>
+        <div class="box bg7 rt1"></div>
+        <div class="box bg8 rt2"></div>
+        <div class="box bg9 rt3"></div>
+
+        <hr>
+
+        <h2>위치지정 : 고정배치 fixed </h2>
+        <div class="box bg10 fx1"></div>
+        <div class="box bg11 fx2"></div>
+        <div class="box bg12 fx3"></div>
+
+    </body>
+
+</html>
+<!-- 위치지정
+position 속성으로 html 요소가 어디에 놓일지 결하는 방식을 지정
+
+정적위치 : static(기본값), 단순히 웹페이지의 흐름에 따라 위에서 아래로,
+           좌에서 우로 차례대로 요소를 배치하는 방식
+
+절대위치 : absolute, 상위요소를 기준으로 상하좌우 지정한 값만큼 떨어진 위치에 요소를 배치
+           상위요소가 없는 경우 body 태그를 상위요소로 봄 / 각각 상위요소를 기준으로 위치를 배치함?
+           상하좌우 속성 : top/bottom/left/right
+
+상대위치 : relative, 현재위치를 기준으로 상하좌우 지정한 값만큼 떨어진 위치에 요소를 배치
+
+고정위치 : pixed, 웹페이지가 보여지는 장치의 가시영역 viewport를 기준으로 요소를 배치
+           즉, 모든 요소들은 가시영역 왼쪽 상자를 기준으로 배치
+
+
+--------------
+
+블릿 이미지
+목록태그의 글머리기호는 크게 3가지 종류로 나뉨
+하지만, 기호가 아닌 이미지로 기호를 대신할 수도 있음
+list-style-type 속성으로 기호의 종류를 변경하거나 숨길 수 있음
+list-style-image 속성으로 기호 대신 이미지를 표시할 수 있음
+
+ul { list-style-type: none; margin: 0; padding: 0 }
+            ul li { /*list-style-image: url(img/espasuchil-3928628-16.png);*/
+                    background: url(img/OIP.jpg) no-repeat left top;
+                    height: 70px; padding-left: 105px; padding-top: 8px
+                  }
+
+
+
+        <h2>블릿이미지</h2>
+        <ul>
+            <li>콜라</li>
+            <li>사이다</li>
+            <li>환타</li>
+            <li>데미소다</li>
+            <li>마운틴듀</li>
+        </ul>
+
+-->
